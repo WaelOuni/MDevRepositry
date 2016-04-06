@@ -1,0 +1,9 @@
+<!-- BEGIN_INCLUDE (view_pager_layout) -->
+<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" />
+<!-- END_INCLUDE (view_pager_layout) -->
+<!-- From: file:/C:/Users/WaelOuni/Desktop/Android%20Samples%20sdk23/ui/HorizontalPaging/Application/src/main/res/layout/sample_main.xml -->
