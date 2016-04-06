@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@android:color/holo_blue_bright"
+    tools:context="android.rnu.iit.premierapp.Main2Activity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geo localisation"
+            android:background="@drawable/loca_icone"
+            android:id="@+id/geoButton"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send email"
+            android:id="@+id/sendButton"
+            android:background="@drawable/send_email"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appel telephonique"
+            android:background="@drawable/telephone"
+            android:id="@+id/appelButton"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Data"
+            android:id="@+id/showButton" />
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

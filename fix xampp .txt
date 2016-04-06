@@ -1,0 +1,4 @@
+trouver le dans le fichier php.ini 
+extension=php_mysql.dll
+
+eliminer les ;;

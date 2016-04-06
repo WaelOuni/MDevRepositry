@@ -1,0 +1,267 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tn.calculator.squeezer.calculatormaterialdesign.CalculatorFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_bienvenu"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:text="You are welcome to MDev training"
+            android:textColor="@android:color/holo_purple"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:id="@+id/lay_cont"
+            android:layout_width="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.36"
+                android:editable="true"
+                android:gravity="right|top"
+                android:textColor="#444444" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:layout_column="4"
+                android:layout_gravity="center"
+                android:layout_row="5"
+                android:layout_weight="1"
+                android:columnCount="4"
+                android:paddingLeft="10dp"
+                android:rowCount="5">
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttonc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:nestedScrollingEnabled="false"
+                    android:onClick="eraseHandle"
+                    android:text="C" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttonpa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="parenthHandler"
+                    android:text="()" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttonpo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="pourcentHandler"
+                    android:text="%" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttondiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="divHandler"
+                    android:text="/" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="septHandler"
+                    android:text="7" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="huitHandler"
+                    android:text="8" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="neufHandler"
+                    android:text="9" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttonmultip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="foisHandler"
+                    android:text="*" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="quatreHandler"
+                    android:text="4" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="cinkHandler"
+                    android:text="5" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="sixHandler"
+                    android:text="6" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttonsous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="moinsHandler"
+                    android:text="-" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="unHandler"
+                    android:text="1" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="deuxHandler"
+                    android:text="2" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="#1E88E5"
+                    android:onClick="troisHandler"
+                    android:text="3" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttonPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="plusHandler"
+                    android:text="+" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttonverg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="virgHandler"
+                    android:text="." />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/button0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="zeroHandler"
+                    android:text="0" />
+
+                <com.gc.materialdesign.views.ButtonRectangle
+                    android:id="@+id/buttonplussous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_weight="1"
+                    android:background="@color/material_deep_teal_200"
+                    android:onClick="negPosHandler"
+                    android:text="+/-" />
+
+                <com.gc.materialdesign.views.ButtonFloatSmall
+                    android:id="@+id/buttonegale"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="@dimen/espacement_components"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:onClick="equalHandler"
+                    android:text="+/-"
+                    materialdesign:iconDrawable="@drawable/equal" />
+            </GridLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

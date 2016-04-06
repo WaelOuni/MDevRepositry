@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "de.goddchen.android.libraries"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        // needed because Dagger 2 and Butterknife contain this file
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+}
+
+configurations {
+    compile.exclude group: 'stax'
+    compile.exclude group: 'xpp3'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+    //ACRA
+    compile 'ch.acra:acra:4.7.0'
+    //Butterknife
+    compile 'com.jakewharton:butterknife:7.0.1'
+    // Commons IO
+    compile 'commons-io:commons-io:2.4'
+    // Dagger 2
+    compile 'com.google.dagger:dagger:2.0'
+    compile 'com.google.dagger:dagger-compiler:2.0'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    // EventBus
+    compile 'de.greenrobot:eventbus:2.4.0'
+    // Gson
+    compile 'com.google.code.gson:gson:2.5'
+    // Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    // Moshi
+    compile 'com.squareup.moshi:moshi:1.0.0'
+    // Otto
+    compile 'com.squareup:otto:1.3.8'
+    // Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    // Ion
+    compile 'com.koushikdutta.ion:ion:2.1.6'
+    // Timber
+    compile 'com.jakewharton.timber:timber:4.1.0'
+    // LeakCanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+    // ksoap2-android
+    compile 'com.google.code.ksoap2-android:ksoap2-android:3.6.0'
+    // QRGen
+    compile 'com.github.kenglxn.QRGen:android:2.1.0'
+    // Simple
+    compile 'org.simpleframework:simple-xml:2.7.1'
+    // UniveralImageLoader
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    // Wire
+    compile 'com.squareup.wire:wire-runtime:2.1.1'
+    // ZXing
+    compile 'com.google.zxing:android-integration:3.2.1'
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android Library A-Z Samples</string>
+    <string name="force_crash">Force a Crash</string>
+    <string name="acra_dialog_message">App has crashed!\nSend a report?</string>
+    <string name="acra_dialog_title">Whoops!</string>
+    <string name="push_me">Push me!</string>
+    <string name="you_did_it">You did it!</string>
+    <string name="force_leak">Force a leak</string>
+</resources>
